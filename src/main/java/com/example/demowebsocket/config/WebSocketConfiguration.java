@@ -1,6 +1,5 @@
 package com.example.demowebsocket.config;
 
-import com.example.demowebsocket.handler.ChatWebSocketHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.WebSocketHandler;
@@ -20,8 +19,8 @@ public class WebSocketConfiguration implements WebSocketConfigurer {
 //                .setAllowedOrigins("*");
     }
 
-    @Bean
-    public WebSocketHandler getChatWebSocketHandler(){
-        return new ChatWebSocketHandler();
-    }
+//    @Bean
+//    public WebSocketHandler getChatWebSocketHandler(){
+//        return new ChatWebSocketHandler();
+//    }
 }

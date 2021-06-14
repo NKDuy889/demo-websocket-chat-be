@@ -1,9 +1,6 @@
 package com.example.demowebsocket.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Message {
@@ -11,6 +8,8 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String textMessage;
+
+    @Column(name = "id_conversation")
     private Long idConversation;
 
     public Message(){};

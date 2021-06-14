@@ -1,5 +1,7 @@
 package com.example.demowebsocket.service;
 
+import com.example.demowebsocket.model.ConversationDTO;
+
 import java.util.List;
 
 public interface ConversationService<E> {
@@ -7,5 +9,5 @@ public interface ConversationService<E> {
 
     E save(E e);
 
-
+    E getConversations(ConversationDTO conversationDTO);
 }
