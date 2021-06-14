@@ -20,7 +20,6 @@ public class ConversationRepoImpl implements ConversationRepo {
                 " inner join users as u on cbc.id_user = u.id " +
                 " where c.id = " + conversationDTO.getIdUser() +
                 " and u.id = " + conversationDTO.getIdConversation());
-        Conversation conversation = (Conversation) entityManager.createNativeQuery(sql.toString()).getSingleResult();
-        return conversation;
+        return Conversation.class.cast(entityManager.createNativeQuery(sql.toString()).getSingleResult());
     }
 }
