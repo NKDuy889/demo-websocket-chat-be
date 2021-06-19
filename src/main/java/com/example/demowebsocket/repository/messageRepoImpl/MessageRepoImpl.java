@@ -19,4 +19,11 @@ public class MessageRepoImpl implements MessageRepo{
         sql.append("from Message where id_conversation = " + idConversation + " order by id asc");
         return entityManager.createQuery(sql.toString()).getResultList();
     }
+
+    @Override
+    public String getNameById(Long idUser) {
+        String sql = "select c from Users c inner join Message m on c.id = m.idUser where c.id = " + idUser
+                + " group by c.name";
+        return entityManager.createQuery(sql).getSingleResult().toString();
+    }
 }

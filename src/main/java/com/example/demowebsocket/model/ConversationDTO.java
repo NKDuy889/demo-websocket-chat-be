@@ -1,22 +1,22 @@
 package com.example.demowebsocket.model;
 
 public class ConversationDTO {
-    private String idUser;
-    private String idConversation;
+    private Long idUser;
+    private Long idConversation;
 
-    public String getIdUser() {
+    public Long getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(Long idUser) {
         this.idUser = idUser;
     }
 
-    public String getIdConversation() {
+    public Long getIdConversation() {
         return idConversation;
     }
 
-    public void setIdConversation(String idConversation) {
+    public void setIdConversation(Long idConversation) {
         this.idConversation = idConversation;
     }
 }

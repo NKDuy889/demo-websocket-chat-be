@@ -12,6 +12,7 @@ public class Conversation {
     private Long id;
     private String name;
     private String avatar;
+    private String typeConversation;
 
     public Long getId() {
         return id;
@@ -35,5 +36,13 @@ public class Conversation {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public String getTypeConversation() {
+        return typeConversation;
+    }
+
+    public void setTypeConversation(String typeConversation) {
+        this.typeConversation = typeConversation;
     }
 }

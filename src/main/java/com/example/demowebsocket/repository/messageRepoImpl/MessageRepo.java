@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface MessageRepo {
     List<Message> getListMessages(Long idConversation);
+
+    String getNameById(Long idUser);
 }

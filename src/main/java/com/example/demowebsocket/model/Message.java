@@ -12,15 +12,8 @@ public class Message {
     @Column(name = "id_conversation")
     private Long idConversation;
 
-    public Message(){};
-    public Message(String textMessage){
-        this.textMessage = textMessage;
-    }
+    private Long idUser;
 
-    public Message(String textMessage, Long idConversation) {
-        this.textMessage = textMessage;
-        this.idConversation = idConversation;
-    }
 
     public Long getId() {
         return id;
@@ -44,5 +37,13 @@ public class Message {
 
     public void setIdConversation(Long idConversation) {
         this.idConversation = idConversation;
+    }
+
+    public Long getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 }
